@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="l_twist" pkg="slider_publisher" type="slider_publisher" output="screen" respawn="true">
+        <param name="file" value="$(find pr2_simple_moveit_config)/config/l_twist_slider.yaml"/>
+    </node>
+
+    <node name="r_twist" pkg="slider_publisher" type="slider_publisher" output="screen" respawn="true">
+        <param name="file" value="$(find pr2_simple_moveit_config)/config/r_twist_slider.yaml"/>
+    </node>
+</launch>

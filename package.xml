@@ -36,6 +36,6 @@
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
   <run_depend>pr2_simulator</run_depend>
   <run_depend>pr2_description</run_depend>
-
+  <run_depend>slider_publisher</run_depend>
 
 </package>

@@ -1,0 +1,18 @@
+<launch>
+  <arg name="config" default="$(find pr2_simple_moveit_config)/config/servo_config.yaml"/>
+
+  <node name="l_arm_servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <rosparam command="load" file="$(arg config)"/>
+    <rosparam param="move_group_name">l_arm</rosparam>
+    <rosparam param="ee_frame_name">l_gripper_tool_frame</rosparam>
+    <rosparam param="command_out_topic">/l_arm_controller/command</rosparam>
+  </node>
+
+  <node name="r_arm_servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <rosparam command="load" file="$(arg config)"/>
+    <rosparam param="move_group_name">r_arm</rosparam>
+    <rosparam param="ee_frame_name">r_gripper_tool_frame</rosparam>
+    <rosparam param="command_out_topic">/r_arm_controller/command</rosparam>
+  </node>
+
+</launch>
