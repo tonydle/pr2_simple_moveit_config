@@ -24,22 +24,22 @@ roslaunch pr2_gazebo pr2_empty_world.launch
 
 To start MoveIt for PR2, run:
 ```bash
-roslaunch pr2_moveit_config move_group.launch
+roslaunch pr2_simple_moveit_config move_group.launch
 ```
 
 To start RViz with the MoveIt Planning layout, run:
 ```bash
-roslaunch pr2_moveit_config moveit_rviz.launch
+roslaunch pr2_simple_moveit_config moveit_rviz.launch
 ```
 
 To start MoveIt Servo, with parameters defined in `config/servo_config.yaml`, run:
 ```bash
-roslaunch pr2_moveit_config arms_servo.launch
+roslaunch pr2_simple_moveit_config arms_servo.launch
 ```
 
 A simple GUI made with slider_publisher to send Twist commands for MoveIt Servo is also included. To start it, run:
 ```bash
-roslauch pr2_moveit_config arms_servo_twist_sliders.launch
+roslauch pr2_simple_moveit_config arms_servo_twist_sliders.launch
 ```
 
 For more instructions on other MoveIt tools, please refer to the [MoveIt tutorials](https://ros-planning.github.io/moveit_tutorials/).
